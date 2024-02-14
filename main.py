@@ -21,7 +21,6 @@ col1, padding, col2, padding, col3, padding, col4 = st.columns(
 def reset():
     pass
 
-
 st.session_state["rq_disabled"] = False
 with col1:
     if st.button(
