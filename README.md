@@ -17,7 +17,7 @@ The idea is to use this prototype to generate the seed data which will - eventua
     you can run `pipenv install` to install the requirements
 3. Add these to a .env file in the root of the project:
     - `PROMPT_ROOT_SEED="limit to 100 words" `
-        - As the name suggests I use this to control/limit the generated data to a certain number of words for a faster response time while developing and testing.
+        - As the name suggests I use this to concateante the prompt with a suffix in order to control/limit the generated text from OpenAI to a certain number of words for a faster response time while developing and testing.
     - `TEXT_EMBEDDINGS_TO_USE="text-embedding-3-small"`
     - `OPENAI_API_KEY="replace-with-your-own--key"`
     - `PINECONE_API_KEY="replace-with-your-own-key"`
@@ -26,5 +26,5 @@ The idea is to use this prototype to generate the seed data which will - eventua
 
 ## notes
 
-working on more refactoring and adding more features to the prototype.
+working on fixes, more refactoring and adding more features to the prototype.
 
