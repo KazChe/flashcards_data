@@ -24,3 +24,7 @@ The idea is to use this prototype to generate the seed data which will - eventua
 3. Run the Streamlit app
     3.1. `streamlit run main.py`
 
+## notes
+
+working on more refactoring and adding more features to the prototype.
+
