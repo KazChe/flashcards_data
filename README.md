@@ -26,5 +26,9 @@ The idea is to use this prototype to generate the seed data which will - eventua
 
 ## notes
 
-working on fixes, more refactoring and adding more features to the prototype.
+working on 
+- fixes to the UI
+- more refactoring 
+- adding more features to the prototype
+    - communication with the web application to send the data
 
