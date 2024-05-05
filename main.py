@@ -1,10 +1,22 @@
 import uuid
 import streamlit as st
+import socketio
 from services.openai_service import OpenAIService
 from services.pinecone_service import PineconeService
 
+
 openai_service = OpenAIService()
 pinecone_service = PineconeService()
+
+sio = socketio.Client()
+
+# function to connect to the socketio server
+def connectToSocketIOServer():
+    try:
+        sio.connect("https://968c-2601-646-9300-2920-d08c-c468-4b9b-c5d2.ngrok-free.app")
+        print("Python client connected to socketio server")
+    except Exception as e:
+        print("Error connecting to socketio server: ", e)
 
 # Streamlit app layout
 st.title("Flashcard Generator")
@@ -66,6 +78,8 @@ with col1:
                         st.text_area("Generated Text:", generated_text, height=250)
                         with col3:
                             st.button("Send to Flashcard")  # TODO: this button
+                            connectToSocketIOServer()
+                            sio.emit("chat message", generated_text)
                         with col4:
                             st.button("Reset", on_click=reset)
                         embeds = openai_service.get_embeddings(user_prompt)

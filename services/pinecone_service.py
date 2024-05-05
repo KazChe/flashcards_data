@@ -4,7 +4,6 @@ from pinecone import Pinecone
 
 load_dotenv()
 
-
 class PineconeService:
     def __init__(self):
         self.pinecone = Pinecone(api_key=os.environ["PINECONE_API_KEY"])
